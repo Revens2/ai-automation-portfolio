@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revens2 — Intégrations MCP sécurisées, agents IA, RAG privé</title>
+<meta name="description" content="Portfolio open source : intégrations MCP sécurisées, agents IA internes, RAG privé et automatisation.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="wrap nav">
+  <span class="brand">Revens2</span>
+  <nav><a href="#projets">Projets</a><a href="#approche">Approche</a><a href="#contact">Contact</a></nav>
+</header>
+<main>
+<section class="wrap hero">
+  <p class="kicker">MCP · Agents IA · RAG privé · Automatisation</p>
+  <h1>Des intégrations IA qui restent sous votre contrôle.</h1>
+  <p class="lead">Je conçois des serveurs MCP sécurisés, des agents IA internes et des RAG privés : authentification OAuth, allowlists, validation des entrées, consentement avant écriture et exécution sandboxée.</p>
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/Revens2" rel="noopener">Voir le code sur GitHub</a>
+    <a class="btn" href="#projets">Parcourir les projets</a>
+  </div>
+</section>
+
+<section id="projets" class="wrap">
+  <h2>Projets</h2>
+  <div class="filters" role="group" aria-label="Filtrer les projets">
+    <button class="on" data-f="all">Tous</button><button data-f="mcp">MCP</button><button data-f="rag">RAG</button><button data-f="agents">Agents</button><button data-f="securite">Sécurité</button>
+  </div>
+  <div class="grid">
+    <article class="card" data-tags="mcp agents securite">
+      <h3>agent-orchestrator-mcp</h3>
+      <p>Pont MCP ChatGPT Web → broker VPS → runner Windows qui orchestre des agents IA locaux.</p>
+      <ul><li>OAuth sur l'endpoint MCP</li><li>Allowlists de commandes et de workspaces</li><li>Validation stricte des requêtes</li></ul>
+      <a href="https://github.com/Revens2/agent-orchestrator-mcp" rel="noopener">Dépôt →</a>
+    </article>
+    <article class="card" data-tags="mcp rag securite">
+      <h3>vault-mcp</h3>
+      <p>Serveur MCP unifié pour un vault Obsidian : lecture, recherche et écriture pour agents IA.</p>
+      <ul><li>RAG hybride (sémantique + lexical)</li><li>Contexte par graphe de liens</li><li>Écriture soumise à consentement</li></ul>
+      <a href="https://github.com/Revens2/vault-mcp" rel="noopener">Dépôt →</a>
+    </article>
+    <article class="card" data-tags="agents securite">
+      <h3>pr-reviewer</h3>
+      <p>Revue de PR sémantique indépendante, en mode advisory, publiée via commit status.</p>
+      <ul><li>Exécution sandboxée Docker</li><li>Polling GitHub, sans webhook ni App</li><li>Surface d'attaque minimale</li></ul>
+      <a href="https://github.com/Revens2/pr-reviewer" rel="noopener">Dépôt →</a>
+    </article>
+    <article class="card" data-tags="mcp securite">
+      <h3>mcp-framework-rs</h3>
+      <p>Framework Rust réutilisable pour les préoccupations communes des serveurs MCP.</p>
+      <ul><li>Auth et OAuth</li><li>Observabilité et cycle de vie</li><li>Outils de compatibilité et migration</li></ul>
+      <a href="https://github.com/Revens2/mcp-framework-rs" rel="noopener">Dépôt →</a>
+    </article>
+    <article class="card" data-tags="rag agents">
+      <h3>llm-wiki</h3>
+      <p>Chaîne d'ingestion et de lint : notes brutes → wiki structuré, prêt pour un RAG.</p>
+      <ul><li>Génération via API Gemini</li><li>Résilient aux quotas</li><li>Lint de cohérence du wiki</li></ul>
+      <a href="https://github.com/Revens2/llm-wiki" rel="noopener">Dépôt →</a>
+    </article>
+  </div>
+</section>
+
+<section id="approche" class="wrap">
+  <h2>Approche</h2>
+  <div class="grid three">
+    <div><h3>Sécurité par défaut</h3><p>Moindre privilège, allowlists, secrets hors du code, validation à chaque frontière.</p></div>
+    <div><h3>Données privées</h3><p>RAG auto-hébergé : vos documents restent sur votre infrastructure.</p></div>
+    <div><h3>Humain dans la boucle</h3><p>Consentement explicite avant toute action d'écriture ou à fort impact.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="wrap contact">
+  <h2>Contact</h2>
+  <p>Le plus simple : ouvrir une issue ou me contacter via mon profil GitHub.</p>
+  <a class="btn primary" href="https://github.com/Revens2" rel="noopener">github.com/Revens2</a>
+</section>
+</main>
+<footer class="wrap"><p>© <span id="y"></span> Revens2 — code open source sur GitHub.</p></footer>
+<script src="assets/main.js"></script>
+</body>
+</html>
