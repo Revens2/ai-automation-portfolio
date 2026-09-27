@@ -1,83 +1,142 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Revens2 — Intégrations MCP sécurisées, agents IA, RAG privé</title>
-<meta name="description" content="Portfolio open source : intégrations MCP sécurisées, agents IA internes, RAG privé et automatisation.">
+<title>Revens2 — Secure agent infrastructure, MCP integrations, private AI systems</title>
+<meta name="description" content="Engineering portfolio: secure agent infrastructure, MCP integrations with OAuth 2.1, private retrieval systems, automation and full-stack products.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="wrap nav">
-  <span class="brand">Revens2</span>
-  <nav><a href="#projets">Projets</a><a href="#approche">Approche</a><a href="#contact">Contact</a></nav>
+  <a class="brand" href="#top">Revens2</a>
+  <nav aria-label="Main">
+    <a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#more">More systems</a><a href="#contact">Contact</a>
+  </nav>
 </header>
-<main>
-<section class="wrap hero">
-  <p class="kicker">MCP · Agents IA · RAG privé · Automatisation</p>
-  <h1>Des intégrations IA qui restent sous votre contrôle.</h1>
-  <p class="lead">Je conçois des serveurs MCP sécurisés, des agents IA internes et des RAG privés : authentification OAuth, allowlists, validation des entrées, consentement avant écriture et exécution sandboxée.</p>
+
+<main id="main">
+<section class="wrap hero" id="top">
+  <p class="kicker">Agent infrastructure · MCP · Private AI · Automation</p>
+  <h1>I build secure agent infrastructure, MCP integrations and private AI systems.</h1>
+  <p class="lead">OAuth-protected MCP servers, sandboxed execution, fail-closed policies and retrieval over private data — designed so that AI agents can act on real systems without being handed a shell.</p>
   <div class="cta">
-    <a class="btn primary" href="https://github.com/Revens2" rel="noopener">Voir le code sur GitHub</a>
-    <a class="btn" href="#projets">Parcourir les projets</a>
+    <a class="btn primary" href="https://github.com/Revens2" rel="noopener">View code on GitHub</a>
+    <a class="btn" href="#work">See case studies</a>
   </div>
+  <ul class="legend" aria-label="Legend">
+    <li><span class="badge open">Open source</span> public repository, linked</li>
+    <li><span class="badge private">Private case study</span> architecture and details available on request</li>
+  </ul>
 </section>
 
-<section id="projets" class="wrap">
-  <h2>Projets</h2>
-  <div class="filters" role="group" aria-label="Filtrer les projets">
-    <button class="on" data-f="all">Tous</button><button data-f="mcp">MCP</button><button data-f="rag">RAG</button><button data-f="agents">Agents</button><button data-f="securite">Sécurité</button>
-  </div>
-  <div class="grid">
-    <article class="card" data-tags="mcp agents securite">
+<section class="wrap" id="work">
+  <h2 class="section-title">Selected work</h2>
+
+  <article class="case">
+    <div class="case-head">
+      <span class="badge open">Open source</span>
       <h3>agent-orchestrator-mcp</h3>
-      <p>Pont MCP ChatGPT Web → broker VPS → runner Windows qui orchestre des agents IA locaux.</p>
-      <ul><li>OAuth sur l'endpoint MCP</li><li>Allowlists de commandes et de workspaces</li><li>Validation stricte des requêtes</li></ul>
-      <a href="https://github.com/Revens2/agent-orchestrator-mcp" rel="noopener">Dépôt →</a>
-    </article>
-    <article class="card" data-tags="mcp rag securite">
-      <h3>vault-mcp</h3>
-      <p>Serveur MCP unifié pour un vault Obsidian : lecture, recherche et écriture pour agents IA.</p>
-      <ul><li>RAG hybride (sémantique + lexical)</li><li>Contexte par graphe de liens</li><li>Écriture soumise à consentement</li></ul>
-      <a href="https://github.com/Revens2/vault-mcp" rel="noopener">Dépôt →</a>
-    </article>
-    <article class="card" data-tags="agents securite">
-      <h3>pr-reviewer</h3>
-      <p>Revue de PR sémantique indépendante, en mode advisory, publiée via commit status.</p>
-      <ul><li>Exécution sandboxée Docker</li><li>Polling GitHub, sans webhook ni App</li><li>Surface d'attaque minimale</li></ul>
-      <a href="https://github.com/Revens2/pr-reviewer" rel="noopener">Dépôt →</a>
-    </article>
-    <article class="card" data-tags="mcp securite">
-      <h3>mcp-framework-rs</h3>
-      <p>Framework Rust réutilisable pour les préoccupations communes des serveurs MCP.</p>
-      <ul><li>Auth et OAuth</li><li>Observabilité et cycle de vie</li><li>Outils de compatibilité et migration</li></ul>
-      <a href="https://github.com/Revens2/mcp-framework-rs" rel="noopener">Dépôt →</a>
-    </article>
-    <article class="card" data-tags="rag agents">
-      <h3>llm-wiki</h3>
-      <p>Chaîne d'ingestion et de lint : notes brutes → wiki structuré, prêt pour un RAG.</p>
-      <ul><li>Génération via API Gemini</li><li>Résilient aux quotas</li><li>Lint de cohérence du wiki</li></ul>
-      <a href="https://github.com/Revens2/llm-wiki" rel="noopener">Dépôt →</a>
-    </article>
+      <p class="sum">Let a ChatGPT Web session dispatch coding missions to local agents — without exposing a shell.</p>
+    </div>
+    <div class="flow" aria-label="Architecture: ChatGPT Web, VPS broker, Windows runner, coding agents">
+      <span>ChatGPT Web</span><span>VPS broker</span><span>Windows runner</span><span>Claude Code · Codex · AGY · OpenCode</span>
+    </div>
+    <div class="case-body">
+      <div><h4>Problem</h4><p>A web chat assistant has no safe path to local development tools, and giving it remote shell access is not acceptable.</p></div>
+      <div><h4>Architecture</h4><p>A broker on a VPS receives MCP calls from ChatGPT Web and relays structured missions to a runner on a Windows machine, which drives Claude Code, Codex, AGY or OpenCode.</p></div>
+      <div><h4>Engineering points</h4><ul><li>OAuth 2.1 on the MCP endpoint</li><li>Allowlists for agents and workspaces</li><li>Mission lifecycle with explicit validation</li><li>No shell exposed to the model</li></ul></div>
+    </div>
+    <a class="link" href="https://github.com/Revens2/agent-orchestrator-mcp" rel="noopener">github.com/Revens2/agent-orchestrator-mcp</a>
+  </article>
+
+  <article class="case">
+    <div class="case-head">
+      <span class="badge private">Private case study</span>
+      <h3>sandbox-mcp</h3>
+      <p class="sum">Disposable Linux VMs that agents can use through MCP, under a fail-closed policy.</p>
+    </div>
+    <div class="flow" aria-label="Architecture: MCP client, OAuth and policy, remote runner, QEMU VM">
+      <span>MCP client</span><span>OAuth + policy</span><span>Remote runner</span><span>QEMU VM (isolated)</span>
+    </div>
+    <div class="case-body">
+      <div><h4>Problem</h4><p>Agents need somewhere to run code, but the host running them must not be the place where that code executes.</p></div>
+      <div><h4>Architecture</h4><p>An OAuth-protected MCP server applies policy, then hands tasks to a remote runner that boots throwaway QEMU virtual machines with network isolation.</p></div>
+      <div><h4>Engineering points</h4><ul><li>Fail-closed policy: denied unless allowed</li><li>Tasks passed as bounded argv, not shell strings</li><li>Network isolation of the guest</li><li>VMs discarded after use</li></ul></div>
+    </div>
+    <p class="private-note">Private case study — architecture/details available on request.</p>
+  </article>
+
+  <article class="case">
+    <div class="case-head">
+      <span class="badge private">Private case study</span>
+      <h3>ARION</h3>
+      <p class="sum">Local 3D reconstruction from Meta Quest captures.</p>
+    </div>
+    <div class="flow" aria-label="Pipeline: validation, conversion, alignment, reconstruction">
+      <span>RGB · depth · poses</span><span>Validation</span><span>Conversion</span><span>Alignment</span><span>Reconstruction → PLY / COLMAP</span>
+    </div>
+    <div class="case-body">
+      <div><h4>Problem</h4><p>Headset captures contain colour, depth and pose data, but turning them into usable 3D output requires a reliable, repeatable pipeline — run locally.</p></div>
+      <div><h4>Architecture</h4><p>A staged pipeline: capture validation, format conversion, alignment, then reconstruction, exporting PLY point clouds and COLMAP-compatible data.</p></div>
+      <div><h4>Engineering points</h4><ul><li>Inputs validated before any processing</li><li>Explicit stages that can be checked independently</li><li>Standard outputs usable in existing 3D tooling</li><li>23 tests in the current pipeline</li></ul></div>
+    </div>
+    <p class="private-note">Private case study — architecture/details available on request.</p>
+  </article>
+
+  <article class="case">
+    <div class="case-head">
+      <span class="badge private">Private case study</span>
+      <h3>Watchy</h3>
+      <p class="sum">Full-stack product to track films, series and anime, installable on iOS and Android.</p>
+    </div>
+    <div class="flow" aria-label="Stack: React client, Fastify API, PostgreSQL, Docker">
+      <span>React 19 PWA</span><span>Fastify API</span><span>Prisma · PostgreSQL</span><span>Docker</span>
+    </div>
+    <div class="case-body">
+      <div><h4>Problem</h4><p>Viewing history is scattered across platforms; users want one place to track and analyse it on any device.</p></div>
+      <div><h4>Architecture</h4><p>React 19, Vite, Tailwind, TanStack Query and Recharts on the client; Fastify, Prisma and PostgreSQL on the server; shipped with Docker.</p></div>
+      <div><h4>Engineering points</h4><ul><li>Imports from multiple platforms</li><li>PWA installable on iOS and Android</li><li>Statistics and charts on viewing history</li><li>Typed data access through Prisma</li></ul></div>
+    </div>
+    <p class="private-note">Private case study — architecture/details available on request.</p>
+  </article>
+</section>
+
+<section class="wrap" id="capabilities">
+  <h2 class="section-title">Capabilities</h2>
+  <div class="caps">
+    <div><h3>MCP &amp; agent systems</h3><p>MCP servers, brokers and runners that let agents act on tools and machines through bounded interfaces.</p></div>
+    <div><h3>Secure integrations / OAuth</h3><p>OAuth 2.1, scopes, allowlists and fail-closed policies in front of every sensitive action.</p></div>
+    <div><h3>Private RAG / retrieval</h3><p>Hybrid lexical + vector search over private notes, with consent before any write.</p></div>
+    <div><h3>Automation &amp; infra</h3><p>Self-hosted services, tunnels, backups, Docker and Linux operations.</p></div>
+    <div><h3>Full-stack product engineering</h3><p>React, Fastify, Prisma, PostgreSQL, PWA — from data model to installable app.</p></div>
+    <div><h3>Computer vision / 3D</h3><p>Reconstruction pipelines from RGB, depth and pose captures to PLY and COLMAP outputs.</p></div>
   </div>
 </section>
 
-<section id="approche" class="wrap">
-  <h2>Approche</h2>
-  <div class="grid three">
-    <div><h3>Sécurité par défaut</h3><p>Moindre privilège, allowlists, secrets hors du code, validation à chaque frontière.</p></div>
-    <div><h3>Données privées</h3><p>RAG auto-hébergé : vos documents restent sur votre infrastructure.</p></div>
-    <div><h3>Humain dans la boucle</h3><p>Consentement explicite avant toute action d'écriture ou à fort impact.</p></div>
-  </div>
+<section class="wrap" id="more">
+  <h2 class="section-title">More systems built</h2>
+  <ul class="more">
+    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/vault-mcp" rel="noopener">vault-mcp</a><p>MCP server for an Obsidian vault: hybrid lexical + vector search, link graph, writes gated by consent and a spool.</p></li>
+    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/mcp-framework-rs" rel="noopener">mcp-framework-rs</a><p>Rust framework for MCP servers: auth/OAuth, observability, compatibility and migration. 67 tests per the README.</p></li>
+    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/pr-reviewer" rel="noopener">pr-reviewer</a><p>Semantic pull-request reviewer running in a Docker sandbox, multi-repo, reporting through GitHub commit statuses. 43 main tests per the README.</p></li>
+    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/tasks-mcp" rel="noopener">tasks-mcp</a><p>Apple Reminders / CalDAV exposed to agents over MCP with OAuth 2.1, mirrored in SQLite and Radicale.</p></li>
+    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/calendar-mcp-gateway" rel="noopener">calendar-mcp-gateway</a><p>Fail-closed OAuth and policy gateway for a Google Calendar MCP server, with a bounded tool profile and an end-to-end CRUD test.</p></li>
+    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/homelab-ops" rel="noopener">homelab-ops</a><p>Operations for a self-hosted homelab.</p></li>
+    <li><span class="badge private">Private case study</span><strong>brave-devtools-mcp</strong><p>Brave/Chrome DevTools control over MCP through a Rust gateway with OAuth, reverse SSH, separate read and write scopes and a fail-closed policy.</p></li>
+    <li><span class="badge private">Private case study</span><strong>activitywatch-stack</strong><p>Self-hosted ActivityWatch: collection on Windows, storage and computation on a VPS, read-only MCP, aggregation and redaction before any LLM, publication to RAG, backups and tunnels.</p></li>
+  </ul>
 </section>
 
-<section id="contact" class="wrap contact">
-  <h2>Contact</h2>
-  <p>Le plus simple : ouvrir une issue ou me contacter via mon profil GitHub.</p>
+<section class="wrap contact" id="contact">
+  <h2 class="section-title">Contact</h2>
+  <p>Code, issues and profile are on GitHub. Details on private case studies are available on request.</p>
   <a class="btn primary" href="https://github.com/Revens2" rel="noopener">github.com/Revens2</a>
 </section>
 </main>
-<footer class="wrap"><p>© <span id="y"></span> Revens2 — code open source sur GitHub.</p></footer>
+
+<footer class="wrap foot"><p>© <span id="year">2026</span> Revens2 · Static site, no tracking.</p></footer>
 <script src="assets/main.js"></script>
 </body>
 </html>

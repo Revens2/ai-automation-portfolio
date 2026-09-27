@@ -1,4 +1,4 @@
 # ai-automation-portfolio
-Portfolio public — MCP, agents IA, RAG, automatisation, self-hosting et intégrations sécurisées.
+Engineering portfolio — secure agent infrastructure, MCP integrations, private AI systems, automation and full-stack products.
 
-Site statique (HTML/CSS/JS, aucune dépendance). Aperçu local : `python -m http.server 8000` puis http://localhost:8000.
+Static site (HTML/CSS/JS, no dependencies), served by GitHub Pages from `main` root. Local preview: `python -m http.server 8000` then http://localhost:8000.
