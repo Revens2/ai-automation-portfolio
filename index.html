@@ -48,6 +48,9 @@
       <div><h4>Architecture</h4><p>A broker on a VPS receives MCP calls from ChatGPT Web and relays structured missions to a runner on a Windows machine, which drives Claude Code, Codex, AGY or OpenCode.</p></div>
       <div><h4>Engineering points</h4><ul><li>OAuth 2.1 on the MCP endpoint</li><li>Allowlists for agents and workspaces</li><li>Mission lifecycle with explicit validation</li><li>No shell exposed to the model</li></ul></div>
     </div>
+    <figure class="diagram diagram-pending" data-diagram="agent-orchestrator">
+      <figcaption>Architecture diagram — Excalidraw export coming soon.</figcaption>
+    </figure>
     <a class="link" href="https://github.com/Revens2/agent-orchestrator-mcp" rel="noopener">github.com/Revens2/agent-orchestrator-mcp</a>
   </article>
 
@@ -65,6 +68,9 @@
       <div><h4>Architecture</h4><p>An OAuth-protected MCP server applies policy, then hands tasks to a remote runner that boots throwaway QEMU virtual machines with network isolation.</p></div>
       <div><h4>Engineering points</h4><ul><li>Fail-closed policy: denied unless allowed</li><li>Tasks passed as bounded argv, not shell strings</li><li>Network isolation of the guest</li><li>VMs discarded after use</li></ul></div>
     </div>
+    <figure class="diagram diagram-pending" data-diagram="sandbox-mcp">
+      <figcaption>Architecture diagram — Excalidraw export coming soon.</figcaption>
+    </figure>
     <p class="private-note">Private case study — architecture/details available on request.</p>
   </article>
 
@@ -99,6 +105,36 @@
       <div><h4>Architecture</h4><p>React 19, Vite, Tailwind, TanStack Query and Recharts on the client; Fastify, Prisma and PostgreSQL on the server; shipped with Docker.</p></div>
       <div><h4>Engineering points</h4><ul><li>Imports from multiple platforms</li><li>PWA installable on iOS and Android</li><li>Statistics and charts on viewing history</li><li>Typed data access through Prisma</li></ul></div>
     </div>
+    <figure class="gallery" aria-label="Watchy product visuals">
+      <div class="gallery-motion">
+        <video muted autoplay loop playsinline preload="metadata" poster="assets/visuals/watchy/watchy-motion-poster.jpg">
+          <source src="assets/visuals/watchy/watchy-motion.mp4" type="video/mp4">
+          Motion design overview of the Watchy product (42-second video).
+        </video>
+      </div>
+      <div class="gallery-grid">
+        <figure>
+          <img src="assets/visuals/watchy/watchy-landing.jpg" alt="Watchy landing page with app overview on desktop and mobile" loading="lazy" width="1920" height="1080">
+          <figcaption>Landing page</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/visuals/watchy/watchy-suivi.jpg" alt="Watchy tracking view with in-progress and to-watch lists and filter" loading="lazy" width="1920" height="1080">
+          <figcaption>Tracking and search</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/visuals/watchy/watchy-calendrier.jpg" alt="Watchy calendar view of upcoming episodes" loading="lazy" width="1920" height="1080">
+          <figcaption>Calendar</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/visuals/watchy/watchy-fiche.jpg" alt="Watchy weekly releases view with title cards" loading="lazy" width="1920" height="1080">
+          <figcaption>Weekly releases and title cards</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/visuals/watchy/watchy-stats.jpg" alt="Watchy statistics dashboard with viewing history charts" loading="lazy" width="1920" height="1080">
+          <figcaption>Statistics dashboard</figcaption>
+        </figure>
+      </div>
+    </figure>
     <p class="private-note">Private case study — architecture/details available on request.</p>
   </article>
 </section>
@@ -124,7 +160,7 @@
     <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/tasks-mcp" rel="noopener">tasks-mcp</a><p>Apple Reminders / CalDAV exposed to agents over MCP with OAuth 2.1, mirrored in SQLite and Radicale.</p></li>
     <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/calendar-mcp-gateway" rel="noopener">calendar-mcp-gateway</a><p>Fail-closed OAuth and policy gateway for a Google Calendar MCP server, with a bounded tool profile and an end-to-end CRUD test.</p></li>
     <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/homelab-ops" rel="noopener">homelab-ops</a><p>Operations for a self-hosted homelab.</p></li>
-    <li><span class="badge private">Private case study</span><strong>brave-devtools-mcp</strong><p>Brave/Chrome DevTools control over MCP through a Rust gateway with OAuth, reverse SSH, separate read and write scopes and a fail-closed policy.</p></li>
+    <li><span class="badge private">Private case study</span><strong>brave-devtools-mcp</strong><p>Brave/Chrome DevTools control over MCP through a Rust gateway with OAuth, reverse SSH, separate read and write scopes and a fail-closed policy.</p><figure class="diagram diagram-pending" data-diagram="brave-devtools-mcp"><figcaption>Architecture diagram — Excalidraw export coming soon.</figcaption></figure></li>
     <li><span class="badge private">Private case study</span><strong>activitywatch-stack</strong><p>Self-hosted ActivityWatch: collection on Windows, storage and computation on a VPS, read-only MCP, aggregation and redaction before any LLM, publication to RAG, backups and tunnels.</p></li>
   </ul>
 </section>
