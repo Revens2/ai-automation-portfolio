@@ -49,7 +49,8 @@
       <div><h4>Engineering points</h4><ul><li>OAuth 2.1 on the MCP endpoint</li><li>Allowlists for agents and workspaces</li><li>Mission lifecycle with explicit validation</li><li>No shell exposed to the model</li></ul></div>
     </div>
     <figure class="diagram diagram-pending" data-diagram="agent-orchestrator">
-      <figcaption>Architecture diagram — Excalidraw export coming soon.</figcaption>
+      <figcaption>Agent Orchestrator architecture — control plane, execution plane and safety invariants (Excalidraw).</figcaption>
+      <noscript><img src="assets/visuals/diagrams/agent-orchestrator.png" alt="Agent Orchestrator architecture diagram: control plane with OAuth gateway and VPS broker, execution plane with Windows runner and coding agents, safety invariants" loading="lazy"></noscript>
     </figure>
     <a class="link" href="https://github.com/Revens2/agent-orchestrator-mcp" rel="noopener">github.com/Revens2/agent-orchestrator-mcp</a>
   </article>
@@ -69,7 +70,8 @@
       <div><h4>Engineering points</h4><ul><li>Fail-closed policy: denied unless allowed</li><li>Tasks passed as bounded argv, not shell strings</li><li>Network isolation of the guest</li><li>VMs discarded after use</li></ul></div>
     </div>
     <figure class="diagram diagram-pending" data-diagram="sandbox-mcp">
-      <figcaption>Architecture diagram — Excalidraw export coming soon.</figcaption>
+      <figcaption>Sandbox MCP architecture — disposable QEMU Linux VMs under a fail-closed policy (Excalidraw).</figcaption>
+      <noscript><img src="assets/visuals/diagrams/sandbox-mcp.png" alt="Sandbox MCP architecture diagram: OAuth fail-closed policy, remote runner, disposable QEMU Linux VM with network isolation" loading="lazy"></noscript>
     </figure>
     <p class="private-note">Private case study — architecture/details available on request.</p>
   </article>
@@ -192,7 +194,7 @@
     <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/tasks-mcp" rel="noopener">tasks-mcp</a><p>Apple Reminders / CalDAV exposed to agents over MCP with OAuth 2.1, mirrored in SQLite and Radicale.</p></li>
     <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/calendar-mcp-gateway" rel="noopener">calendar-mcp-gateway</a><p>Fail-closed OAuth and policy gateway for a Google Calendar MCP server, with a bounded tool profile and an end-to-end CRUD test.</p></li>
     <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/homelab-ops" rel="noopener">homelab-ops</a><p>Operations for a self-hosted homelab.</p></li>
-    <li><span class="badge private">Private case study</span><strong>brave-devtools-mcp</strong><p>Brave/Chrome DevTools control over MCP through a Rust gateway with OAuth, reverse SSH, separate read and write scopes and a fail-closed policy.</p><figure class="diagram diagram-pending" data-diagram="brave-devtools-mcp"><figcaption>Architecture diagram — Excalidraw export coming soon.</figcaption></figure></li>
+    <li><span class="badge private">Private case study</span><strong>brave-devtools-mcp</strong><p>Brave/Chrome DevTools control over MCP through a Rust gateway with OAuth, reverse SSH, separate read and write scopes and a fail-closed policy.</p><figure class="diagram diagram-pending" data-diagram="brave-devtools-mcp"><figcaption>Brave DevTools MCP architecture — scoped browser control over a private tunnel, CDP loopback only (Excalidraw).</figcaption><noscript><img src="assets/visuals/diagrams/brave-devtools-mcp.png" alt="Brave DevTools MCP architecture diagram: scoped read and write access to Brave over a private reverse SSH tunnel, CDP loopback only" loading="lazy"></noscript></figure></li>
     <li><span class="badge private">Private case study</span><strong>activitywatch-stack</strong><p>Self-hosted ActivityWatch: collection on Windows, storage and computation on a VPS, read-only MCP, aggregation and redaction before any LLM, publication to RAG, backups and tunnels.</p></li>
   </ul>
 </section>

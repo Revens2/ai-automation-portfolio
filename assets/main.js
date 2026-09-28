@@ -14,7 +14,15 @@ if (year) year.textContent = String(new Date().getFullYear());
     probe.onload = () => {
       const img = document.createElement("img");
       img.src = probe.src;
-      img.alt = name + " architecture diagram";
+      const altText = {
+        "agent-orchestrator":
+          "Agent Orchestrator architecture diagram: control plane with OAuth gateway and VPS broker, execution plane with Windows runner and coding agents, safety invariants",
+        "sandbox-mcp":
+          "Sandbox MCP architecture diagram: OAuth fail-closed policy, remote runner, disposable QEMU Linux VM with network isolation",
+        "brave-devtools-mcp":
+          "Brave DevTools MCP architecture diagram: scoped read and write access to Brave over a private reverse SSH tunnel, CDP loopback only",
+      };
+      img.alt = altText[name] || name + " architecture diagram";
       img.loading = "lazy";
       slot.prepend(img);
       slot.classList.remove("diagram-pending");
