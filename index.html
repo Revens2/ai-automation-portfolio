@@ -1,212 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Revens2 — Secure agent infrastructure, MCP integrations, private AI systems</title>
-<meta name="description" content="Engineering portfolio: secure agent infrastructure, MCP integrations with OAuth 2.1, private retrieval systems, automation and full-stack products.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10182a">
+<title>Revens2 — RAG, context engineering, AI audits &amp; MCP agents</title><meta name="description" content="Engineering portfolio: private RAG and AI memory, context-window management, traceable audits, MCP integrations and bounded agent automation.">
+<link rel="canonical" href="https://revens2.github.io/ai-automation-portfolio/">
+<link rel="alternate" hreflang="en" href="https://revens2.github.io/ai-automation-portfolio/">
+<link rel="alternate" hreflang="fr" href="https://revens2.github.io/ai-automation-portfolio/fr/">
+<link rel="alternate" hreflang="x-default" href="https://revens2.github.io/ai-automation-portfolio/">
+<meta property="og:type" content="website"><meta property="og:locale" content="en_US">
+<meta property="og:title" content="Revens2 — RAG, context engineering, AI audits &amp; MCP agents"><meta property="og:description" content="Engineering portfolio: private RAG and AI memory, context-window management, traceable audits, MCP integrations and bounded agent automation.">
+<meta property="og:url" content="https://revens2.github.io/ai-automation-portfolio/">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="wrap nav">
-  <a class="brand" href="#top">Revens2</a>
-  <nav aria-label="Main">
-    <a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#more">More systems</a><a href="#contact">Contact</a>
-  </nav>
-</header>
-
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top"><div class="container header-inner">
+ <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">R<span>.</span></span><span>Revens2<small>AI SYSTEMS ENGINEERING</small></span></a>
+ <nav aria-label="Main navigation"><a href="#expertise">Expertise</a><a href="#work">Case studies</a><a href="#method">Approach</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+ <div class="lang-switch" aria-label="Select language"><a href="" lang="en" hreflang="en" aria-current="page">EN</a><a href="fr/" lang="fr" hreflang="fr" >FR</a></div>
+</div></header>
 <main id="main">
-<section class="wrap hero" id="top">
-  <p class="kicker">Agent infrastructure · MCP · Private AI · Automation</p>
-  <h1>I build secure agent infrastructure, MCP integrations and private AI systems.</h1>
-  <p class="lead">OAuth-protected MCP servers, sandboxed execution, fail-closed policies and retrieval over private data — designed so that AI agents can act on real systems without being handed a shell.</p>
-  <div class="cta">
-    <a class="btn primary" href="https://github.com/Revens2" rel="noopener">View code on GitHub</a>
-    <a class="btn" href="#work">See case studies</a>
-  </div>
-  <ul class="legend" aria-label="Legend">
-    <li><span class="badge open">Open source</span> public repository, linked</li>
-    <li><span class="badge private">Private case study</span> architecture and details available on request</li>
-  </ul>
+<section class="hero container" aria-labelledby="hero-title">
+ <div class="hero-copy"><p class="eyebrow accent-line">ENGINEERING PORTFOLIO · OCT 2026</p><h1 id="hero-title">AI systems that retrieve the right context, and can be audited.</h1><p class="hero-lead">I build private RAG and memory pipelines, context-aware agent workflows, traceable audits and MCP integrations with explicit boundaries. Public code where possible. Clear limits everywhere.</p><div class="hero-actions"><a href="#work" class="button button-dark">Explore the work <span aria-hidden="true">↗</span></a><a href="https://github.com/Revens2/" class="button button-ghost" target="_blank" rel="noopener noreferrer">Public code on GitHub <span aria-hidden="true">↗</span></a></div></div>
+ <aside class="hero-aside"><p class="aside-kicker">01—04 / FOCUS</p><h2>What I focus on</h2><ul><li><span>01</span>Knowledge that survives across agent sessions</li><li><span>02</span>Relevant context, not oversized prompts</li><li><span>03</span>Audits with evidence and explicit unknowns</li><li><span>04</span>MCP tools with controlled permissions</li></ul><div class="aside-bottom">RAG / CONTEXT / AUDITS / MCP</div></aside>
 </section>
-
-<section class="wrap" id="work">
-  <h2 class="section-title">Selected work</h2>
-
-  <article class="case">
-    <div class="case-head">
-      <span class="badge open">Open source</span>
-      <h3>agent-orchestrator-mcp</h3>
-      <p class="sum">Let a ChatGPT Web session dispatch coding missions to local agents — without exposing a shell.</p>
-    </div>
-    <div class="flow" aria-label="Architecture: ChatGPT Web, VPS broker, Windows runner, coding agents">
-      <span>ChatGPT Web</span><span>VPS broker</span><span>Windows runner</span><span>Claude Code · Codex · AGY · OpenCode</span>
-    </div>
-    <div class="case-body">
-      <div><h4>Problem</h4><p>A web chat assistant has no safe path to local development tools, and giving it remote shell access is not acceptable.</p></div>
-      <div><h4>Architecture</h4><p>A broker on a VPS receives MCP calls from ChatGPT Web and relays structured missions to a runner on a Windows machine, which drives Claude Code, Codex, AGY or OpenCode.</p></div>
-      <div><h4>Engineering points</h4><ul><li>OAuth 2.1 on the MCP endpoint</li><li>Allowlists for agents and workspaces</li><li>Mission lifecycle with explicit validation</li><li>No shell exposed to the model</li></ul></div>
-    </div>
-    <figure class="diagram diagram-pending" data-diagram="agent-orchestrator">
-      <figcaption>Agent Orchestrator architecture — control plane, execution plane and safety invariants (Excalidraw).</figcaption>
-      <noscript><img src="assets/visuals/diagrams/agent-orchestrator.png" alt="Agent Orchestrator architecture diagram: control plane with OAuth gateway and VPS broker, execution plane with Windows runner and coding agents, safety invariants" loading="lazy"></noscript>
-    </figure>
-    <a class="link" href="https://github.com/Revens2/agent-orchestrator-mcp" rel="noopener">github.com/Revens2/agent-orchestrator-mcp</a>
-  </article>
-
-  <article class="case">
-    <div class="case-head">
-      <span class="badge private">Private case study</span>
-      <h3>sandbox-mcp</h3>
-      <p class="sum">Disposable Linux VMs that agents can use through MCP, under a fail-closed policy.</p>
-    </div>
-    <div class="flow" aria-label="Architecture: MCP client, OAuth and policy, remote runner, QEMU VM">
-      <span>MCP client</span><span>OAuth + policy</span><span>Remote runner</span><span>QEMU VM (isolated)</span>
-    </div>
-    <div class="case-body">
-      <div><h4>Problem</h4><p>Agents need somewhere to run code, but the host running them must not be the place where that code executes.</p></div>
-      <div><h4>Architecture</h4><p>An OAuth-protected MCP server applies policy, then hands tasks to a remote runner that boots throwaway QEMU virtual machines with network isolation.</p></div>
-      <div><h4>Engineering points</h4><ul><li>Fail-closed policy: denied unless allowed</li><li>Tasks passed as bounded argv, not shell strings</li><li>Network isolation of the guest</li><li>VMs discarded after use</li></ul></div>
-    </div>
-    <figure class="diagram diagram-pending" data-diagram="sandbox-mcp">
-      <figcaption>Sandbox MCP architecture — disposable QEMU Linux VMs under a fail-closed policy (Excalidraw).</figcaption>
-      <noscript><img src="assets/visuals/diagrams/sandbox-mcp.png" alt="Sandbox MCP architecture diagram: OAuth fail-closed policy, remote runner, disposable QEMU Linux VM with network isolation" loading="lazy"></noscript>
-    </figure>
-    <p class="private-note">Private case study — architecture/details available on request.</p>
-  </article>
-
-  <article class="case">
-    <div class="case-head">
-      <span class="badge private">Private case study</span>
-      <h3>ARION</h3>
-      <p class="sum">Local 3D reconstruction from Meta Quest captures.</p>
-    </div>
-    <div class="flow" aria-label="Pipeline: validation, conversion, alignment, reconstruction">
-      <span>RGB · depth · poses</span><span>Validation</span><span>Conversion</span><span>Alignment</span><span>Reconstruction → PLY / COLMAP</span>
-    </div>
-    <div class="case-body">
-      <div><h4>Problem</h4><p>Headset captures contain colour, depth and pose data, but turning them into usable 3D output requires a reliable, repeatable pipeline — run locally.</p></div>
-      <div><h4>Architecture</h4><p>A staged pipeline: capture validation, format conversion, alignment, then reconstruction, exporting PLY point clouds and COLMAP-compatible data.</p></div>
-      <div><h4>Engineering points</h4><ul><li>Inputs validated before any processing</li><li>Explicit stages that can be checked independently</li><li>Standard outputs usable in existing 3D tooling</li><li>23 tests in the current pipeline</li></ul></div>
-    </div>
-    <p class="private-note">Private case study — architecture/details available on request.</p>
-  </article>
-
-  <article class="case">
-    <div class="case-head">
-      <span class="badge private">Private case study</span>
-      <h3>Watchy</h3>
-      <p class="sum">Full-stack product to track films, series and anime, installable on iOS and Android.</p>
-    </div>
-    <div class="flow" aria-label="Stack: React client, Fastify API, PostgreSQL, Docker">
-      <span>React 19 PWA</span><span>Fastify API</span><span>Prisma · PostgreSQL</span><span>Docker</span>
-    </div>
-    <div class="case-body">
-      <div><h4>Problem</h4><p>Viewing history is scattered across platforms; users want one place to track and analyse it on any device.</p></div>
-      <div><h4>Architecture</h4><p>React 19, Vite, Tailwind, TanStack Query and Recharts on the client; Fastify, Prisma and PostgreSQL on the server; shipped with Docker.</p></div>
-      <div><h4>Engineering points</h4><ul><li>Imports from multiple platforms</li><li>PWA installable on iOS and Android</li><li>Statistics and charts on viewing history</li><li>Typed data access through Prisma</li></ul></div>
-    </div>
-    <figure class="gallery" aria-label="Watchy product visuals">
-      <p class="live-note">Live product screenshots — captured from the running app.</p>
-      <div class="gallery-grid gallery-live">
-        <figure>
-          <img src="assets/visuals/watchy/live/watchy-home-live.png" alt="Watchy home, live screenshot: resume banner, behind-schedule and continue-watching rows" loading="lazy" decoding="async" width="1280" height="675">
-          <figcaption>Home — live</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/visuals/watchy/live/watchy-search-live.png" alt="Watchy search, live screenshot: results list for the query Dune" loading="lazy" decoding="async" width="1280" height="675">
-          <figcaption>Search — live</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/visuals/watchy/live/watchy-title-live.png" alt="Watchy title page, live screenshot: anime entry with episode tracking and watch providers" loading="lazy" decoding="async" width="1280" height="675">
-          <figcaption>Title page — live</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/visuals/watchy/live/watchy-watchlist-live.png" alt="Watchy tracking view, live screenshot: in-progress shows with next episodes to check off" loading="lazy" decoding="async" width="1280" height="694">
-          <figcaption>Tracking — live</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/visuals/watchy/live/watchy-stats-live.png" alt="Watchy statistics dashboard, live screenshot: total watch time, genre split and history charts" loading="lazy" decoding="async" width="1280" height="694">
-          <figcaption>Statistics — live</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/visuals/watchy/live/watchy-calendar-live.png" alt="Watchy calendar, live screenshot: September 2026 upcoming episode broadcasts" loading="lazy" decoding="async" width="1280" height="694">
-          <figcaption>Calendar — live</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/visuals/watchy/live/watchy-mobile-live.png" alt="Watchy home on a 390 px wide phone, live screenshot: responsive layout" loading="lazy" decoding="async" width="480" height="1039">
-          <figcaption>Mobile (390 px) — live</figcaption>
-        </figure>
-      </div>
-      <p class="live-note">Motion design and presentation frames — complementary product work.</p>
-      <div class="gallery-motion">
-        <video muted autoplay loop playsinline preload="metadata" poster="assets/visuals/watchy/watchy-motion-poster.jpg">
-          <source src="assets/visuals/watchy/watchy-motion.mp4" type="video/mp4">
-          Motion design overview of the Watchy product (42-second video).
-        </video>
-      </div>
-      <div class="gallery-grid">
-        <figure>
-          <img src="assets/visuals/watchy/watchy-landing.jpg" alt="Watchy landing page with app overview on desktop and mobile" loading="lazy" width="1920" height="1080">
-          <figcaption>Landing page</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/visuals/watchy/watchy-suivi.jpg" alt="Watchy tracking view with in-progress and to-watch lists and filter" loading="lazy" width="1920" height="1080">
-          <figcaption>Tracking and search</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/visuals/watchy/watchy-calendrier.jpg" alt="Watchy calendar view of upcoming episodes" loading="lazy" width="1920" height="1080">
-          <figcaption>Calendar</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/visuals/watchy/watchy-fiche.jpg" alt="Watchy weekly releases view with title cards" loading="lazy" width="1920" height="1080">
-          <figcaption>Weekly releases and title cards</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/visuals/watchy/watchy-stats.jpg" alt="Watchy statistics dashboard with viewing history charts" loading="lazy" width="1920" height="1080">
-          <figcaption>Statistics dashboard</figcaption>
-        </figure>
-      </div>
-    </figure>
-    <p class="private-note">Private case study — architecture/details available on request.</p>
-  </article>
-</section>
-
-<section class="wrap" id="capabilities">
-  <h2 class="section-title">Capabilities</h2>
-  <div class="caps">
-    <div><h3>MCP &amp; agent systems</h3><p>MCP servers, brokers and runners that let agents act on tools and machines through bounded interfaces.</p></div>
-    <div><h3>Secure integrations / OAuth</h3><p>OAuth 2.1, scopes, allowlists and fail-closed policies in front of every sensitive action.</p></div>
-    <div><h3>Private RAG / retrieval</h3><p>Hybrid lexical + vector search over private notes, with consent before any write.</p></div>
-    <div><h3>Automation &amp; infra</h3><p>Self-hosted services, tunnels, backups, Docker and Linux operations.</p></div>
-    <div><h3>Full-stack product engineering</h3><p>React, Fastify, Prisma, PostgreSQL, PWA — from data model to installable app.</p></div>
-    <div><h3>Computer vision / 3D</h3><p>Reconstruction pipelines from RGB, depth and pose captures to PLY and COLMAP outputs.</p></div>
-  </div>
-</section>
-
-<section class="wrap" id="more">
-  <h2 class="section-title">More systems built</h2>
-  <ul class="more">
-    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/vault-mcp" rel="noopener">vault-mcp</a><p>MCP server for an Obsidian vault: hybrid lexical + vector search, link graph, writes gated by consent and a spool.</p></li>
-    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/mcp-framework-rs" rel="noopener">mcp-framework-rs</a><p>Rust framework for MCP servers: auth/OAuth, observability, compatibility and migration. 67 tests per the README.</p></li>
-    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/pr-reviewer" rel="noopener">pr-reviewer</a><p>Semantic pull-request reviewer running in a Docker sandbox, multi-repo, reporting through GitHub commit statuses. 43 main tests per the README.</p></li>
-    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/tasks-mcp" rel="noopener">tasks-mcp</a><p>Apple Reminders / CalDAV exposed to agents over MCP with OAuth 2.1, mirrored in SQLite and Radicale.</p></li>
-    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/calendar-mcp-gateway" rel="noopener">calendar-mcp-gateway</a><p>Fail-closed OAuth and policy gateway for a Google Calendar MCP server, with a bounded tool profile and an end-to-end CRUD test.</p></li>
-    <li><span class="badge open">Open source</span><a href="https://github.com/Revens2/homelab-ops" rel="noopener">homelab-ops</a><p>Operations for a self-hosted homelab.</p></li>
-    <li><span class="badge private">Private case study</span><strong>brave-devtools-mcp</strong><p>Brave/Chrome DevTools control over MCP through a Rust gateway with OAuth, reverse SSH, separate read and write scopes and a fail-closed policy.</p><figure class="diagram diagram-pending" data-diagram="brave-devtools-mcp"><figcaption>Brave DevTools MCP architecture — scoped browser control over a private tunnel, CDP loopback only (Excalidraw).</figcaption><noscript><img src="assets/visuals/diagrams/brave-devtools-mcp.png" alt="Brave DevTools MCP architecture diagram: scoped read and write access to Brave over a private reverse SSH tunnel, CDP loopback only" loading="lazy"></noscript></figure></li>
-    <li><span class="badge private">Private case study</span><strong>activitywatch-stack</strong><p>Self-hosted ActivityWatch: collection on Windows, storage and computation on a VPS, read-only MCP, aggregation and redaction before any LLM, publication to RAG, backups and tunnels.</p></li>
-  </ul>
-</section>
-
-<section class="wrap contact" id="contact">
-  <h2 class="section-title">Contact</h2>
-  <p>Code, issues and profile are on GitHub. Details on private case studies are available on request.</p>
-  <a class="btn primary" href="https://github.com/Revens2" rel="noopener">github.com/Revens2</a>
-</section>
+<section class="evidence-band"><div class="container"><div class="section-intro evidence-intro"><p class="eyebrow">EVIDENCE</p><h2>Real repositories. Specific engineering choices.</h2><p>Selected public projects supporting the technical claims below — not a list of hypothetical demos.</p></div><div class="proof-grid"><a href="https://github.com/Revens2/vault-mcp" target="_blank" rel="noopener noreferrer" class="proof"><span class="proof-name">vault-mcp</span><span class="proof-kind">RAG · retrieval</span><span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/Revens2/llm-wiki" target="_blank" rel="noopener noreferrer" class="proof"><span class="proof-name">llm-wiki</span><span class="proof-kind">Ingestion · lint</span><span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/Revens2/convia-sanitize" target="_blank" rel="noopener noreferrer" class="proof"><span class="proof-name">convia-sanitize</span><span class="proof-kind">Redaction · pipeline</span><span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/Revens2/pr-reviewer" target="_blank" rel="noopener noreferrer" class="proof"><span class="proof-name">pr-reviewer</span><span class="proof-kind">Semantic review</span><span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/Revens2/agent-orchestrator-mcp" target="_blank" rel="noopener noreferrer" class="proof"><span class="proof-name">agent-orchestrator-mcp</span><span class="proof-kind">MCP · agents</span><span class="arrow" aria-hidden="true">↗</span></a><a href="https://github.com/Revens2/excalidraw-mcp-gateway" target="_blank" rel="noopener noreferrer" class="proof"><span class="proof-name">excalidraw-mcp-gateway</span><span class="proof-kind">OAuth · permissions</span><span class="arrow" aria-hidden="true">↗</span></a></div></div></section>
+<section class="section container" id="expertise"><div class="section-intro"><p class="eyebrow">FOCUS</p><h2>Four connected disciplines</h2></div><div class="axes"><article class="axis"><span>01 / RETRIEVAL</span><h3>RAG &amp; durable memory</h3><p>Hybrid lexical/vector retrieval, note graphs, ingestion, reconciliation and source-of-truth boundaries.</p></article>
+<article class="axis"><span>02 / CONTEXT</span><h3>Context-window discipline</h3><p>Retrieve just what an agent needs; use compact handoffs and separate known facts from unverified inference.</p></article>
+<article class="axis"><span>03 / VERIFICATION</span><h3>Audits &amp; observability</h3><p>Semantic PR reviews, RAG consistency checks and SEO measurement with missing-data reporting.</p></article>
+<article class="axis"><span>04 / EXECUTION</span><h3>MCP &amp; agent automation</h3><p>OAuth, scoped tools, explicit allowlists, bounded execution and independently observable jobs.</p></article></div></section>
+<section class="section work-section container" id="work"><div class="section-intro"><p class="eyebrow">SELECTED CASE STUDIES</p><h2>From prototypes to verifiable systems</h2></div><p class="legend"><span class="pill open">Public repository</span><span class="pill private">Private case study</span><span>Private systems are discussed at a high level; source code and confidential operational details are not published.</span></p><div class="cases"><article class="case" id="case-1" aria-labelledby="case-title-1">
+ <div class="case-top"><div class="case-numeral">01</div><div class="case-main"><div class="eyebrow">RAG · KNOWLEDGE SYSTEMS</div><h3 id="case-title-1">A private knowledge layer for multiple AI agents</h3><p class="case-intro">Search, ingest and reuse knowledge without treating a retrieval index as the source of truth.</p></div><span class="pill open">Public code</span></div>
+ <div class="case-columns"><div><h4>Challenge</h4><p>Long-lived notes and exported conversations become hard to retrieve, easy to duplicate and risky to pass wholesale to an LLM.</p></div><div><h4>Engineering</h4><p>vault-mcp exposes hybrid lexical/vector search with reciprocal-rank fusion and a note-link graph; llm-wiki structures raw material into a searchable wiki; convia-sanitize separates redaction and RAG publication.</p></div><div><h4>Checks and boundaries</h4><p>Write intents and consent gates, conflict handling, incremental processing, quota-aware ingestion, reproducible checks. Redaction reduces exposure; it is not a promise of perfect anonymisation.</p></div></div>
+ 
+ 
+ <div class="case-bottom"><div><span class="mini-label">Known limits</span><p>Exact production topology evolves; the public RAG documentation is not a single verified live-deployment snapshot.</p></div><div class="case-links"><span class="mini-label">Public evidence</span><div><a class="text-link" href="https://github.com/Revens2/vault-mcp" target="_blank" rel="noopener noreferrer">vault-mcp <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/Revens2/llm-wiki" target="_blank" rel="noopener noreferrer">llm-wiki <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/Revens2/convia-sanitize" target="_blank" rel="noopener noreferrer">convia-sanitize <span aria-hidden="true">↗</span></a></div></div></div></article>
+<article class="case" id="case-2" aria-labelledby="case-title-2">
+ <div class="case-top"><div class="case-numeral">02</div><div class="case-main"><div class="eyebrow">CODE REVIEW · RAG QUALITY · PRODUCT ANALYTICS</div><h3 id="case-title-2">Audits that distinguish evidence from assumptions</h3><p class="case-intro">One principle across three domains: what was checked, what failed, what remains unknown.</p></div><span class="pill open">Public code</span></div>
+ <div class="case-columns"><div><h4>Challenge</h4><p>A review that silently treats missing signals as success creates false confidence.</p></div><div><h4>Engineering</h4><p>pr-reviewer runs isolated, read-only semantic PR reviews and publishes advisory GitHub commit statuses. llm-wiki includes a rule-based RAG lint (R1–R24). Watchy SEO reports combine available GA4/GSC signals and record collection gaps.</p></div><div><h4>Checks and boundaries</h4><p>Independent deterministic CI remains separate from semantic review; model certification is required for a PASS; incomplete SEO data is reported as incomplete.</p></div></div>
+ 
+ 
+ <div class="case-bottom"><div><span class="mini-label">Known limits</span><p>PR review is advisory, not a protected merge gate. Watchy analytics and audit reports are private; no invented performance figures are shown.</p></div><div class="case-links"><span class="mini-label">Public evidence</span><div><a class="text-link" href="https://github.com/Revens2/pr-reviewer" target="_blank" rel="noopener noreferrer">pr-reviewer <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/Revens2/llm-wiki" target="_blank" rel="noopener noreferrer">llm-wiki <span aria-hidden="true">↗</span></a></div></div></div></article>
+<article class="case" id="case-3" aria-labelledby="case-title-3">
+ <div class="case-top"><div class="case-numeral">03</div><div class="case-main"><div class="eyebrow">AGENTS · MCP · PERMISSIONS</div><h3 id="case-title-3">Orchestrating real coding agents through bounded MCP tools</h3><p class="case-intro">A web assistant can launch, follow and manage real agent missions without gaining a general-purpose remote shell.</p></div><span class="pill open">Public code</span></div>
+ <div class="case-columns"><div><h4>Challenge</h4><p>Agents need to act on development machines, but unrestricted shell access expands the failure and security surface.</p></div><div><h4>Engineering</h4><p>agent-orchestrator-mcp connects a web MCP client to an OAuth gateway, a VPS broker and a Windows runner controlling configured coding runtimes.</p></div><div><h4>Checks and boundaries</h4><p>Structured job lifecycle, allowlisted workspaces and runtimes, fixed argument construction, independent runner-side validation and restricted tool permissions.</p></div></div>
+ <figure class="case-media diagram"><img src="assets/visuals/diagrams/agent-orchestrator.png" width="1200" height="660" alt="Excalidraw architecture for the MCP broker, OAuth gateway and Windows runner" loading="lazy" decoding="async"><figcaption>Orchestrator architecture — existing Excalidraw diagram</figcaption></figure>
+ 
+ <div class="case-bottom"><div><span class="mini-label">Known limits</span><p>Safety properties describe implemented controls, not a blanket claim of perfect security.</p></div><div class="case-links"><span class="mini-label">Public evidence</span><div><a class="text-link" href="https://github.com/Revens2/agent-orchestrator-mcp" target="_blank" rel="noopener noreferrer">agent-orchestrator-mcp <span aria-hidden="true">↗</span></a></div></div></div></article>
+<article class="case" id="case-4" aria-labelledby="case-title-4">
+ <div class="case-top"><div class="case-numeral">04</div><div class="case-main"><div class="eyebrow">FULL-STACK PRODUCT</div><h3 id="case-title-4">Watchy — a complete media-tracking web app</h3><p class="case-intro">An end-to-end product case study alongside the infrastructure work.</p></div><span class="pill private">Private case study</span></div>
+ <div class="case-columns"><div><h4>Challenge</h4><p>Watch history and next episodes are scattered across services and devices.</p></div><div><h4>Engineering</h4><p>React 19 PWA, Fastify API, Prisma and PostgreSQL, containerised with Docker. Features include multi-platform imports, watchlists, statistics and a mobile interface.</p></div><div><h4>Checks and boundaries</h4><p>Product, API and data-model work shown with existing screenshots of the running application.</p></div></div>
+ 
+ <div class="watchy-gallery"><figure><img src="assets/visuals/watchy/live/watchy-home-live.png" alt="Watchy home screen" loading="lazy" width="1280" height="675"></figure><figure><img src="assets/visuals/watchy/live/watchy-stats-live.png" alt="Watchy statistics dashboard" loading="lazy" width="1280" height="694"></figure><figure><img src="assets/visuals/watchy/live/watchy-mobile-live.png" alt="Watchy mobile view" loading="lazy" width="480" height="1039"></figure></div><p class="media-caption">Existing screenshots from the Watchy application</p>
+ <div class="case-bottom"><div><span class="mini-label">Known limits</span><p>Application repository is private; screenshots are a product demonstration, not an uptime or adoption claim.</p></div></div></article></div></section>
+<section class="method-section" id="method"><div class="container method-inner"><div class="method-intro"><p class="eyebrow">CONTEXT ENGINEERING</p><h2>The context window is a budget — not a knowledge base.</h2><p>This is a working method applied across agent projects, not a standalone product with published token-savings benchmarks.</p><p class="method-note">Methodology; no quantified efficiency or retrieval-quality improvement is claimed.</p></div><ol class="method-list"><li><span class="step-count">01</span><div><h3>Retrieve selectively</h3><p>Search by the current task and cite the relevant source instead of injecting complete folders or transcripts.</p></div></li><li><span class="step-count">02</span><div><h3>Keep an authority hierarchy</h3><p>Durable notes and versioned code are the source of record. RAG search results are an index, not independent proof.</p></div></li><li><span class="step-count">03</span><div><h3>Carry compact handoffs</h3><p>Transfer decisions, constraints, state and next steps between agents — not entire conversation histories.</p></div></li><li><span class="step-count">04</span><div><h3>Audit uncertainty</h3><p>Label observations, hypotheses, stale data and missing measurements before actions or reports are approved.</p></div></li></ol></div></section>
+<section class="section container" id="projects"><div class="section-intro"><p class="eyebrow">MORE BUILDING BLOCKS</p><h2>Additional systems</h2><p>Selected public repositories and private studies. A private label never implies that the repository is accessible.</p></div><div class="more-grid"><article class="more-card"><div class="more-head"><span class="pill small open">Public code</span></div><h3><a class="plain-link" href="https://github.com/Revens2/mcp-framework-rs" target="_blank" rel="noopener noreferrer">mcp-framework-rs <span aria-hidden="true">↗</span></a></h3><p>Reusable Rust MCP foundations: transport, authentication, lifecycle and observability.</p></article>
+<article class="more-card"><div class="more-head"><span class="pill small open">Public code</span></div><h3><a class="plain-link" href="https://github.com/Revens2/excalidraw-mcp-gateway" target="_blank" rel="noopener noreferrer">excalidraw-mcp-gateway <span aria-hidden="true">↗</span></a></h3><p>OAuth and permission-aware MCP integration with persistent Excalidraw files.</p></article>
+<article class="more-card"><div class="more-head"><span class="pill small open">Public code</span></div><h3><a class="plain-link" href="https://github.com/Revens2/github-mcp-gateway" target="_blank" rel="noopener noreferrer">github-mcp-gateway <span aria-hidden="true">↗</span></a></h3><p>Authenticated, scope-aware gateway to the official GitHub MCP server.</p></article>
+<article class="more-card"><div class="more-head"><span class="pill small open">Public code</span></div><h3><a class="plain-link" href="https://github.com/Revens2/tasks-mcp" target="_blank" rel="noopener noreferrer">tasks-mcp <span aria-hidden="true">↗</span></a></h3><p>Apple Reminders and CalDAV tasks available through bounded MCP interfaces.</p></article>
+<article class="more-card"><div class="more-head"><span class="pill small open">Public code</span></div><h3><a class="plain-link" href="https://github.com/Revens2/waw-mcp" target="_blank" rel="noopener noreferrer">waw-mcp <span aria-hidden="true">↗</span></a></h3><p>Agent-facing web and identity workflows with explicit security boundaries.</p></article>
+<article class="more-card"><div class="more-head"><span class="pill small private">Private case study</span></div><h3>sandbox-mcp</h3><p>Disposable QEMU execution environment for bounded agent tasks.</p></article>
+<article class="more-card"><div class="more-head"><span class="pill small private">Private case study</span></div><h3>brave-devtools-mcp</h3><p>Browser automation bridge with differentiated read/write permissions.</p></article>
+<article class="more-card"><div class="more-head"><span class="pill small private">Private case study</span></div><h3>ARION</h3><p>Offline 3D reconstruction pipeline from headset captures.</p></article></div></section>
+<section class="section container outcomes"><div class="section-intro"><p class="eyebrow">WHAT THIS ENABLES</p><h2>Practical engineering work</h2></div><div class="outcome-grid"><p><span>01</span>Audit, design or harden a document RAG and retrieval pipeline.</p><p><span>02</span>Reduce context overload in multi-agent workflows and improve handoffs.</p><p><span>03</span>Build MCP integrations with authentication and explicit permissions.</p><p><span>04</span>Add evidence-based code review, technical audits and observability.</p></div></section>
+<section class="contact-section" id="contact"><div class="container contact-inner"><div><p class="eyebrow">LET'S BUILD</p><h2>Need an auditable AI workflow?</h2><p>Start with the public code and case studies. I can discuss the architecture and scope of private work without exposing data or credentials.</p></div><a href="https://github.com/Revens2/" class="button button-light" target="_blank" rel="noopener noreferrer">Open GitHub profile <span aria-hidden="true">↗</span></a></div></section>
 </main>
-
-<footer class="wrap foot"><p>© <span id="year">2026</span> Revens2 · Static site, no tracking.</p></footer>
-<script src="assets/main.js"></script>
-</body>
-</html>
+<footer class="site-footer"><div class="container"><span>© 2026 Revens2</span><span>Static portfolio · No third-party trackers · Updated October 2026</span><a href="#top">Back to top ↑</a></div></footer>
+</body></html>
