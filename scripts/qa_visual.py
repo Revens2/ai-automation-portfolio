@@ -84,6 +84,8 @@ with sync_playwright() as p:
                     else:
                         FAILED.append(f"{rel} @{width}: project filter missing")
                 if rel in SCREENSHOTS and width in (360, 1440):
+                    page.evaluate("window.scrollTo(0, 0)")
+                    page.wait_for_timeout(80)
                     page.screenshot(path=str(OUT / (rel.replace("/", "_").replace(".html", "") + f"_{width}.png")), full_page=True)
                 print(json.dumps({"page": rel, "viewport": width, "theme": values["bg"], "overflow_px": values["overflow"], "images": len(images)}, ensure_ascii=False))
                 page.close()
