@@ -14,6 +14,8 @@ PAGES = (
     ("fr/index.html", "fr", "index.html"),
     ("projects.html", "en", "fr/projets.html"),
     ("fr/projets.html", "fr", "projects.html"),
+    ("architecture.html", "en", "fr/architecture.html"),
+    ("fr/architecture.html", "fr", "architecture.html"),
     *tuple((f"projects/{name}.html", "en", f"fr/projets/{name}.html") for name in CASES),
     *tuple((f"fr/projets/{name}.html", "fr", f"projects/{name}.html") for name in CASES),
 )
