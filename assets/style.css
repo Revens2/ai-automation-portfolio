@@ -135,3 +135,10 @@
 .pitch-source-link{font:700 11px/1.5 var(--mono);color:#d4d9d1;text-decoration:none;text-underline-offset:4px}
 .pitch-source-link:hover{color:var(--acid);text-decoration:underline}
 @media(max-width:650px){.pitch-opportunity{font-size:10px;max-width:100%}.pitch-source-link{display:inline-flex}}
+
+/* Mobile index: long bilingual privacy badges must not force horizontal scroll. */
+.index-card{min-width:0;overflow-wrap:anywhere}
+.index-card .top{flex-wrap:wrap;min-width:0}
+.index-card .top>*{min-width:0}
+.index-card .top .pill{white-space:normal;overflow-wrap:anywhere;max-width:100%}
+.pitch-index-notes .note-card{min-width:0}
