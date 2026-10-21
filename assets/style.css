@@ -130,3 +130,8 @@
 .case-quickread h3{font:700 11px/1.5 var(--mono);letter-spacing:.06em;color:var(--acid);text-transform:uppercase;margin:0 0 8px}
 .case-quickread p{font-size:14px;line-height:1.6;margin:0;color:#d6dfd0}
 @media(max-width:660px){.case-quickread{padding:20px}.case-quickread-grid{grid-template-columns:1fr}.case-quickread-grid>div+div{border-left:0;border-top:1px solid #364334;padding:15px 0 0}}
+
+.pitch-opportunity{display:inline-flex;align-items:center;gap:8px;font:600 11px/1.5 var(--mono);color:#d4d7d0;border-left:2px solid var(--acid);padding-left:11px;margin:16px 0 10px}
+.pitch-source-link{font:700 11px/1.5 var(--mono);color:#d4d9d1;text-decoration:none;text-underline-offset:4px}
+.pitch-source-link:hover{color:var(--acid);text-decoration:underline}
+@media(max-width:650px){.pitch-opportunity{font-size:10px;max-width:100%}.pitch-source-link{display:inline-flex}}
