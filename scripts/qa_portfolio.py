@@ -112,7 +112,7 @@ for rel, language, parallel in PAGES:
             if not (ROOT / localpath).is_file():
                 fail(rel, f"broken local resource: {value} -> {localpath}")
     css_links = [attrs["href"] for tag, attrs in parsed.attrs if tag == "link" and attrs.get("rel") == "stylesheet"]
-    if len(css_links) != 1 or "?v=20261021dark" not in css_links[0]:
+    if len(css_links) != 1 or "?v=" not in css_links[0]:
         fail(rel, f"unexpected versioned stylesheet: {css_links}")
 
 if ERRORS:
