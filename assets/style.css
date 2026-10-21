@@ -145,7 +145,7 @@
 
 /* Architecture-led editorial refresh */
 .eco-hero{border-bottom:1px solid var(--stroke);background:radial-gradient(ellipse at 78% 17%,rgba(200,241,105,.055),transparent 52%),#0e0f11;padding:clamp(88px,10vw,145px) 0 91px}
-.eco-hero h1{font-size:clamp(45px,7.3vw,105px);line-height:1.025;letter-spacing:-.075em;font-weight:770;max-width:16ch;margin:22px 0 26px;text-wrap:balance}
+.eco-hero h1{font-size:clamp(45px,6.25vw,88px);line-height:1.025;letter-spacing:-.075em;font-weight:770;max-width:16ch;margin:22px 0 26px;text-wrap:balance}
 .eco-lede{font-size:clamp(17px,1.75vw,23px);line-height:1.58;max-width:740px;color:#c8cec7}
 .eco-hero .hero-actions{margin-top:35px}
 .eco-hero-checks{list-style:none;display:flex;gap:10px 25px;flex-wrap:wrap;margin:46px 0 0;padding:0}
@@ -228,3 +228,9 @@
 @media(max-width:900px){.eco-devices{grid-template-columns:repeat(2,minmax(0,1fr))}.eco-repos{grid-template-columns:repeat(2,minmax(0,1fr))}.eco-about{gap:35px}.eco-hero h1{font-size:clamp(47px,7vw,78px)}}
 @media(max-width:670px){.eco-hero{padding:72px 0 67px}.eco-hero h1{font-size:clamp(43px,10vw,61px);max-width:16ch}.eco-lede{font-size:17px}.eco-hero-checks{margin-top:29px}.eco-mini-devices{font-size:10px}.eco-section{padding-block:73px}.eco-section-head h2{font-size:38px}.eco-project-grid,.eco-expert-grid,.eco-repos,.eco-about,.arch-hardware{grid-template-columns:1fr}.eco-project:first-child{grid-column:1}.eco-project{padding:22px;grid-template-columns:24px 1fr;gap:11px}.eco-project h3{font-size:29px}.eco-project-shot{grid-column:1/-1}.eco-devices{grid-template-columns:1fr 1fr}.eco-device{padding:14px}.eco-device h3{font-size:17px}.eco-device p{font-size:12px}.eco-large-figure figcaption,.arch-figure figcaption{font-size:11px;padding:13px}.eco-about{padding-block:76px;gap:9px}.eco-about>p{margin:0}.eco-end{padding:73px 0}.arch-hero{padding:58px 0 48px}.arch-hero h1{font-size:44px}.arch-lead{font-size:17px}.arch-section{padding-block:70px}.arch-toc a{padding:9px 10px;font-size:10px}.arch-section-head h2{font-size:35px}}
 @media(max-width:390px){.eco-devices{grid-template-columns:1fr}.eco-hero h1{font-size:42px}.eco-repo{font-size:13px}.arch-image-actions a{font-size:10px}}
+/* Keep Excalidraw text legible: swipe horizontally inside figures on narrow screens. */
+@media(max-width:670px){
+.eco-large-figure>a,.arch-figure>a{overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.eco-large-figure img,.arch-figure img{width:840px;max-width:none;height:auto}
+}
+.arch-swipe-hint{display:block;font:11px/1.6 var(--mono);color:#b4c7ac;margin-top:12px}
