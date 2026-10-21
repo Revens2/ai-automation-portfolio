@@ -32,7 +32,12 @@ base = f"http://127.0.0.1:{httpd.server_address[1]}/"
 threading.Thread(target=httpd.serve_forever, daemon=True).start()
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
+    # Hosted runners ship Chrome; avoid unreliable CDN downloads when available.
+    import shutil
+    if shutil.which("google-chrome") or shutil.which("google-chrome-stable"):
+        browser = p.chromium.launch(channel="chrome", headless=True, args=["--no-sandbox"])
+    else:
+        browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
     try:
         for width, height in SIZES:
             context = browser.new_context(viewport={"width": width, "height": height}, device_scale_factor=1)
