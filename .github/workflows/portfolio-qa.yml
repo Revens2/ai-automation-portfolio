@@ -18,10 +18,15 @@ jobs:
           python-version: '3.12'
       - name: Validate site structure and privacy
         run: python scripts/qa_portfolio.py
-      - name: Install Chromium for browser checks
+      - name: Install browser automation dependencies
         run: |
           python -m pip install playwright
-          python -m playwright install --with-deps chromium
+          if command -v google-chrome >/dev/null || command -v google-chrome-stable >/dev/null; then
+            echo "Using preinstalled Google Chrome on GitHub runner"
+          else
+            echo "Chrome is not preinstalled; downloading Chromium from Azure Edge"
+            PLAYWRIGHT_DOWNLOAD_HOST=https://playwright.azureedge.net python -m playwright install --with-deps chromium
+          fi
       - name: Check rendered pages at desktop and mobile sizes
         run: python scripts/qa_visual.py
       - name: Retain visual QA screenshots
