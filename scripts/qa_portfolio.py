@@ -66,11 +66,15 @@ for rel, language, parallel in PAGES:
         fail(rel, "sensitive-looking string")
     link_elements = [attrs for tag, attrs in parsed.attrs if tag == "link"]
     canonicals = [x.get("href") for x in link_elements if x.get("rel") == "canonical"]
-    expected_url = urljoin(ROOT_URL, rel if rel != "index.html" else "")
+    expected_url = (ROOT_URL if rel == "index.html" else
+                    ROOT_URL + "fr/" if rel == "fr/index.html" else
+                    urljoin(ROOT_URL, rel))
     if canonicals != [expected_url]:
         fail(rel, f"canonical mismatch: {canonicals!r} expected {expected_url}")
     alt_langs = {x.get("hreflang"): x.get("href") for x in link_elements if x.get("rel") == "alternate"}
-    parallel_url = urljoin(ROOT_URL, parallel if parallel != "index.html" else "")
+    parallel_url = (ROOT_URL if parallel == "index.html" else
+                    ROOT_URL + "fr/" if parallel == "fr/index.html" else
+                    urljoin(ROOT_URL, parallel))
     if alt_langs.get(language) != expected_url:
         fail(rel, "self hreflang missing or incorrect")
     if alt_langs.get("fr" if language == "en" else "en") != parallel_url:
