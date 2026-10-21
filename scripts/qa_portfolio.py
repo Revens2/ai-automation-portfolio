@@ -14,6 +14,8 @@ PAGES = (
     ("fr/index.html", "fr", "index.html"),
     ("projects.html", "en", "fr/projets.html"),
     ("fr/projets.html", "fr", "projects.html"),
+    ("architecture.html", "en", "fr/architecture.html"),
+    ("fr/architecture.html", "fr", "architecture.html"),
     *tuple((f"projects/{name}.html", "en", f"fr/projets/{name}.html") for name in CASES),
     *tuple((f"fr/projets/{name}.html", "fr", f"projects/{name}.html") for name in CASES),
 )
@@ -62,6 +64,10 @@ for rel, language, parallel in PAGES:
         fail(rel, f"expected one H1, got {parsed.h1}")
     if len(set(parsed.ids)) != len(parsed.ids):
         fail(rel, "duplicate id attributes")
+    if "\u2014" in html or "\u2013" in html:
+        fail(rel, "long dash punctuation remains in HTML")
+    if re.search(r"(?i)(au travail, je vois|architecture de plus de vingt ans|at work, i see the constraints|refus de l.ia)", html):
+        fail(rel, "outdated employment narrative remains")
     if re.search(r"(ghp_[0-9A-Za-z]{15}|sk-[A-Za-z0-9]{25}|BEGIN PRIVATE KEY|10\.200\.\d+\.\d+)", html):
         fail(rel, "sensitive-looking string")
     link_elements = [attrs for tag, attrs in parsed.attrs if tag == "link"]
@@ -114,6 +120,27 @@ for rel, language, parallel in PAGES:
     css_links = [attrs["href"] for tag, attrs in parsed.attrs if tag == "link" and attrs.get("rel") == "stylesheet"]
     if len(css_links) != 1 or "?v=" not in css_links[0]:
         fail(rel, f"unexpected versioned stylesheet: {css_links}")
+
+# The architecture diagrams are authored with the Excalidraw MCP and kept editable.
+import json
+import xml.etree.ElementTree as ET
+for slug in ("topologie-infrastructure", "parcours-agents", "parcours-rag"):
+    svg = ROOT / "assets" / "visuals" / "diagrams" / (slug + ".svg")
+    exc = svg.with_suffix(".excalidraw")
+    if not svg.is_file() or not exc.is_file():
+        fail(slug, "missing SVG export or editable Excalidraw source")
+        continue
+    try:
+        image = ET.parse(svg).getroot()
+        assert image.tag.endswith("svg")
+        assert image.attrib.get("viewBox") == "0 0 1200 900"
+        doc = json.loads(exc.read_text(encoding="utf-8"))
+        assert len(doc.get("elements", [])) >= 10
+        assert len(image.findall(".//{http://www.w3.org/2000/svg}text")) >= 5
+        if "—" in svg.read_text(encoding="utf-8"):
+            fail(slug, "long dash remains in diagram")
+    except Exception as err:
+        fail(slug, f"malformed Excalidraw or SVG: {err}")
 
 if ERRORS:
     print(f"FAIL: {len(ERRORS)} issues")

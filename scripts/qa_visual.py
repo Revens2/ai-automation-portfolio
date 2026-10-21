@@ -15,12 +15,13 @@ OUT = ROOT / "qa-screenshots"
 OUT.mkdir(exist_ok=True)
 PAGES = [
     "index.html", "fr/index.html", "projects.html", "fr/projets.html",
+    "architecture.html", "fr/architecture.html",
     *[f"projects/{slug}.html" for slug in ("orchestration", "sandbox", "rag", "watchy", "audits")],
     *[f"fr/projets/{slug}.html" for slug in ("orchestration", "sandbox", "rag", "watchy", "audits")],
 ]
 FAILED = []
 SIZES = [(360, 800), (390, 844), (1440, 900)]
-SCREENSHOTS = {"index.html", "fr/index.html", "projects.html", "fr/projets.html", "fr/projets/rag.html", "fr/projets/watchy.html"}
+SCREENSHOTS = {"index.html", "fr/index.html", "projects.html", "fr/projets.html", "fr/projets/rag.html", "fr/projets/watchy.html", "fr/architecture.html", "architecture.html"}
 
 
 def handler(*args, **kwargs):

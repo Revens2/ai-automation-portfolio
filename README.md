@@ -1,31 +1,32 @@
-# AI Automation Portfolio — Revens2
+# Juliann, AI Engineering Portfolio
 
-Public, static GitHub Pages portfolio for [Revens2](https://github.com/Revens2).
+Static bilingual portfolio documenting personal AI agent systems, RAG, MCP integrations, self-hosted infrastructure and software products.
 
-**Live website:** https://revens2.github.io/ai-automation-portfolio/
+## Public pages
 
-- English: `/index.html` (default)
-- French: `/fr/index.html`
-- Shared styles: `/assets/style.css`
-- No frameworks, tracking scripts, analytics, external fonts or JS required.
-- Existing Watchy screenshots and existing Excalidraw architecture artwork are reused.
+| French | English |
+| --- | --- |
+| `fr/index.html` | `index.html` |
+| `fr/architecture.html` | `architecture.html` |
+| `fr/projets.html` | `projects.html` |
+| `fr/projets/{orchestration,rag,sandbox,watchy,audits}.html` | `projects/{orchestration,rag,sandbox,watchy,audits}.html` |
 
-## Editorial focus (October 2026)
+The architecture page presents a sanitized conceptual overview of a Windows runner, remote server, repurposed ARM64 smartphone agent node, DIY Debian NAS, private network, and RAG services.
 
-1. **RAG & memory** — `vault-mcp`, `llm-wiki`, `convia-sanitize`.
-2. **Context engineering** — retrieval discipline, sources of authority and compact agent handoffs. Documented as a working method, **not** as a benchmarked product or token-savings claim.
-3. **Traceable audits** — `pr-reviewer` (advisory only), RAG lint and private Watchy GA4/GSC audit practice.
-4. **MCP & bounded agents** — `agent-orchestrator-mcp` and complementary public gateways.
-5. **Full-stack** — private Watchy product case study.
+All new diagrams are authored using the connected Excalidraw MCP. Each is checked for overlaps and text readability, stored as an editable Excalidraw document and rendered as a scalable vector image. SVG exports are derived from Excalidraw elements, not separately authored architectures.
 
-Private repositories are not linked; public claims point to public repositories. Private audit reports, operational URLs, tokens and personal vault content are deliberately excluded. Both languages should be updated together.
+## Editorial conventions
 
-## Local preview
+* Distinguish the implementation of a project from its verification.
+* Public source does not imply an open-source license.
+* Mark private and experimental systems clearly.
+* No confidential hosts, IPs, tokens, paths, ports, credential details or private network policies.
+* No invented hours, savings, ROI, performance benchmarks or client impact.
+* Do not include unrelated employment anecdotes.
+* Avoid long dash punctuation in prose and UI.
 
-```sh
-python -m http.server 8000
-```
+## Local review
 
-Open http://localhost:8000/ or http://localhost:8000/fr/.
+Run `python -m http.server 8000` and open the site, or inspect the GitHub Pages deployment. CI validates HTML links and privacy, then uses Chromium to exercise layouts at multiple viewport sizes.
 
-Hosted with GitHub Pages from `main` at repository root.
+See [the published portfolio](https://revens2.github.io/ai-automation-portfolio/).
